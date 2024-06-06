@@ -23,10 +23,10 @@ class CharacterDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val character = arguments?.getSerializable("character") as CharacterModel
+        val character = requireArguments().getSerializable("character") as CharacterModel
         binding.apply {
             tvStatus.text = character.status
-            tvName.text = character.status
+            tvName.text = character.name
             Glide.with(characterImg).load(character.image).into(characterImg)
         }
     }

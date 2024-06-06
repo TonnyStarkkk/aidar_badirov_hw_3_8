@@ -54,7 +54,7 @@ class CharacterFragment : Fragment() {
     }
 
     private fun onClick(characterModel: CharacterModel) {
-        findNavController().navigate(R.id.singInScreenFragment, bundleOf("character" to characterModel))
+        findNavController().navigate(R.id.characterDetailFragment, bundleOf("character" to characterModel))
     }
 }
 
